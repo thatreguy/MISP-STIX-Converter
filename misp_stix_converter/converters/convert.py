@@ -222,7 +222,7 @@ def STIXtoMISP(stix, mispAPI, **kwargs):
         log.debug("Attributes exist. Pushing...")
         if mispAPI:
             response = mispAPI.add_event(
-                json.dumps(misp_event, cls=MISPEncode))
+                misp_event, pythonify=True)
             if response.get('errors'):
                 raise Exception("PACKAGE: {}\nERROR: {}".format(
                     json.dumps(misp_event, cls=MISPEncode),

@@ -414,7 +414,7 @@ def parseIndicators(event, pkg):
 
     header,event_info,event = parseIndicatorHeader(stix_header,event)
 
-    has_indicators = False
+    has_indicators = True
     #for intent in pkg.stix_header.package_intents:
     #    if str(intent).lower() == "indicators":
     #        has_indicators = True
